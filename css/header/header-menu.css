@@ -1,0 +1,6 @@
+.header__menu {
+    align-items: center;
+    display: flex;
+    height: 7.1875rem;
+    justify-content: space-between;
+}

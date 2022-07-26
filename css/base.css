@@ -1,0 +1,28 @@
+:root {
+    --color-fondo-blanco: #FFFFFF;
+    --color-fondo-noTanBlanco: #F5F5F5;
+    --color-fondo-celesteClaro: #EAF2FD;
+    --color-fuente: #464646;
+    --color-placeholder: #A2A2A2;
+    --color-botones: #2A7AE4;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.container {
+  margin: 0 9.5rem;
+}

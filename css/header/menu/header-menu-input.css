@@ -1,0 +1,5 @@
+.header__menu__input {
+    background-color: var(--color-fondo-noTanBlanco);
+    border: none;
+    height: 100%;
+}
