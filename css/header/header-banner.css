@@ -1,4 +1,3 @@
 .header__banner {
-    display: flex;
-    background-color: aqua;
+    width: 100%;
 }

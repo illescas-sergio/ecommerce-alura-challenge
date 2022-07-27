@@ -1,4 +1,8 @@
 .banner {
-    background-image: url('/assets/geeky-shots-hQ4BQ3wdHsQ-unsplash_m.jpg');
-    height: 100%;
+    align-items: flex-end;
+    background: url('../../../assets/banner-image.png') no-repeat center / cover;
+    display: flex;
+    height: 352px;
+    padding: 2rem 0;
+    width: 100%;
 }
