@@ -1,0 +1,9 @@
+.products__items {
+    display: grid;
+    grid-template-columns:repeat(6, 1fr) ;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    margin: 1rem 0 0 0;
+    width: 100%;
+}
+

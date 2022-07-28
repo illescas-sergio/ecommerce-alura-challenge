@@ -1,0 +1,31 @@
+.products__card {
+    display: flex;
+    flex-direction: column;    
+}
+
+.card__img {
+    height: 174px;
+    width: 100%;
+    
+}
+
+.card__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0.5rem;
+}
+
+.card__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0.5rem 0;
+}
+
+.card__details {
+    color: var(--color-botones);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}

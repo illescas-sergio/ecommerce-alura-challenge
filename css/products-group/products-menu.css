@@ -1,0 +1,33 @@
+.products__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products__title {
+    color: var(--color-fuente);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.products__ver {
+    align-items: center;
+    background-color: var(--color-fondo-noTanBlanco);
+    border: none;
+    color: var(--color-botones);
+    display: flex;
+    font-weight: 700;
+    font-size: 16px;
+    height: 24px;
+    justify-content: space-between;
+    line-height: 19px;
+    padding: 0;
+    width: 97px;
+}
+
+.products__ver--flecha {
+    background: url("../../assets/flecha_sm.svg") no-repeat center / cover;
+    height: 1rem;
+    width: 1rem;
+}

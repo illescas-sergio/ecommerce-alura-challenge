@@ -16,6 +16,7 @@ html {
   }
 
 body {
+    color: var(--color-fuente);
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -23,6 +24,14 @@ body {
     line-height: 19px;
 }
 
+a {
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .container {
-  margin: 0 9.5rem;
+  margin: 0 10.55vw;
 }
