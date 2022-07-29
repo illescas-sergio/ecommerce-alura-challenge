@@ -29,11 +29,21 @@
     <link rel="stylesheet" href="./css/products-group/products-cards/products-cards.css">
     <link rel="stylesheet" href="./css/products-group/products-cards/products-id.css">
 
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/footer/footer-poweredBy.css">
+    <link rel="stylesheet" href="./css/footer/footer-content.css">   
+    <link rel="stylesheet" href="./css/footer/footer-flex/footer__flex.css">
+    <link rel="stylesheet" href="./css/footer/footer-flex/footer-links/footer-links.css">
+    <link rel="stylesheet" href="./css/footer/footer-flex/footer-contact/footer-contact.css">
+    <link rel="stylesheet" href="./css/footer/footer-flex/footer-contact/footer-form.css">
 
 
 
     <link rel="stylesheet" href="./css/responsive.css">
+
     <title>Alura Geek</title>
+
+
 </head>
 <body>
     <header class="header">
@@ -203,14 +213,35 @@
             </div>
         </section>
     </main>
-    <footer>
-        <section class="footer">
-            <div class="footer__content">
-                <div class="footer__logo"></div>
-                <div class="footer__contact"></div>
+
+    <footer class="footer">
+        <section class="footer__content" >
+            <div class="footer__flex container">
+                <div class="footer__logo"><img src="./assets/Logo.png" alt="" class="header__logo__img"></div>
+                <div class="footer__links">
+                    <a class="footer__links--item" href="">Quienes somos</a>
+                    <a class="footer__links--item" href="">Política de privacidad</a>
+                    <a class="footer__links--item" href="">Programa de fidelidad</a>
+                    <a class="footer__links--item" href="">Nuestras tiendas</a>
+                    <a class="footer__links--item" href="">Quiero ser franquiciado</a>
+                    <a class="footer__links--item" href="">Anuncie aquí</a>
+                </div>
+                <div class="footer__contact">
+                    <form class="footer__form" name="form">
+                        <h4 class="form__title">Hable con nosotros</h4>
+                        <input class="form__input" type="text" name="nombre" placeholder="Nombre">
+                        <textarea class="form__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
+                        <button type="submit" class="form__button">Enviar mensaje</button>
+                    </form>   
+                </div>
             </div>
         </section>
-        <section class="powered-by"></section>
+        <section class="footer__powered-by">
+            <div class="powered-by__author">
+                <p class="powered-by__author--text">Desarrollado por Sergio Illescas</p> 
+                <p>2022</p>
+            </div>
+        </section>
     </footer>
 
    

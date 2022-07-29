@@ -1,0 +1,9 @@
+.footer__flex {
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+.footer__logo {
+    align-self: flex-start;
+    width: 25%;
+}
