@@ -4,3 +4,22 @@
     height: 50px;
     padding: 5px 0;
 }
+
+
+/*tablet*/
+@media (max-width: 768px) {
+    .header__logo {
+        height: 40px;
+    }
+
+    .header__logo__img {
+        height: 28px;
+        width: 100px;
+    }
+    
+}
+  
+/*mobile*/
+@media only screen and (max-width: 480px) {
+  
+}

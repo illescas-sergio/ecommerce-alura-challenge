@@ -6,3 +6,17 @@
     padding: 2rem 0;
     width: 100%;
 }
+
+/*tablet*/
+@media (max-width: 768px) {
+    .banner {
+        height: 352px;
+    }
+}
+  
+/*mobile*/
+@media only screen and (max-width: 480px) {
+    .banner {
+        height: 192px;
+    }
+}

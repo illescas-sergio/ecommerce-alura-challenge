@@ -3,3 +3,19 @@
     border: none;
     height: 100%;
 }
+
+
+/*tablet*/
+@media (max-width: 768px) {
+    .header__menu__input {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+    } 
+    
+}
+  
+/*mobile*/
+@media only screen and (max-width: 480px) {
+  
+}

@@ -6,3 +6,19 @@
     width: 129px;
     height: 50px;
 }
+
+/*tablet*/
+@media (max-width: 768px) {
+    .banner__boton--ver {
+        width: 118px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+  
+/*mobile*/
+@media only screen and (max-width: 480px) {
+  
+}

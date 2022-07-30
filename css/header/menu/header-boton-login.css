@@ -9,3 +9,19 @@
     padding: 16px;
     width: 182px;   
 }
+
+/*tablet*/
+@media (max-width: 768px) {
+    .header__boton--login {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        height: 40px;
+        width: 166px;     
+    }      
+}
+  
+/*mobile*/
+@media only screen and (max-width: 480px) {
+  
+}
