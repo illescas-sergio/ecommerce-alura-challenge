@@ -7,3 +7,20 @@
     width: 100%;
 }
 
+/*tablet*/
+@media (max-width: 768px) {
+  .products__items {
+    grid-template-columns:repeat(4, 1fr) ;
+  }
+  .erase {
+    display: none;
+  }
+}
+  
+/*mobile*/
+@media only screen and (max-width: 480px) {
+  .products__items {
+    grid-template-columns:repeat(2, 1fr) ;
+  }    
+}
+

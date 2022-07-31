@@ -7,3 +7,40 @@
     align-self: flex-start;
     width: 25%;
 }
+
+/*tablet*/
+@media (max-width: 768px) {
+    .footer__flex {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 2rem 0;
+        flex-wrap: wrap;
+        height: 358px;
+        justify-content: flex-start;
+    } 
+    .footer__logo {
+        height: 50px;
+    }
+   
+}
+    
+/*mobile*/
+@media only screen and (max-width: 480px) {
+    .footer__flex {
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: unset;
+        padding: 1rem 0;
+        height: unset;
+    } 
+    .footer__logo {
+        align-self: unset;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+}
+  
+

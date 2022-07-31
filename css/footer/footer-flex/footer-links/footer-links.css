@@ -11,3 +11,23 @@
     font-weight: 500;
     line-height: 19px;
 }
+
+/*tablet*/
+@media (max-width: 768px) {
+    .footer__links {
+        height: 234px;
+        width: 35%;
+    }
+}
+    
+/*mobile*/
+@media only screen and (max-width: 480px) {
+    .footer__links {
+        margin: 1rem 0;
+        width: 100%;
+        gap: 1rem;
+        text-align: center;
+        height: unset;
+    }
+}
+  

@@ -6,3 +6,19 @@
     gap: 8px;
     width: 50%;
 }
+
+/*tablet*/
+@media (max-width: 768px) {
+    .footer__contact {
+        width: 65%;
+    }
+}
+    
+/*mobile*/
+@media only screen and (max-width: 480px) {
+    .footer__contact {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+  

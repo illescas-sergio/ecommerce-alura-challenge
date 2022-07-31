@@ -46,5 +46,7 @@ button:hover {
 
 /*mobile*/
 @media only screen and (max-width: 480px) {
-
+  .container {
+    margin: 0 1rem;
+  }
 }
