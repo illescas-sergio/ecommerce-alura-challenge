@@ -15,6 +15,7 @@
 /*tablet*/
 @media (max-width: 768px) {
     .footer__links {
+        margin-top: 1rem;
         height: 234px;
         width: 35%;
     }
