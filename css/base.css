@@ -5,6 +5,7 @@
     --color-fuente: #464646;
     --color-placeholder: #A2A2A2;
     --color-botones: #2A7AE4;
+    --color-fondo-login: #E5E5E5;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
