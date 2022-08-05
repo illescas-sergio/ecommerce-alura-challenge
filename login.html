@@ -21,6 +21,10 @@
 
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/login/login-div.css">
+    <link rel="stylesheet" href="./css/login/login-form.css">
+    <link rel="stylesheet" href="./css/login/login-form/login-title.css">
+    <link rel="stylesheet" href="./css/login/login-form/login-input.css">
+    <link rel="stylesheet" href="./css/login/login-form/login-button-login.css">
 
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/footer/footer-poweredBy.css">
@@ -51,17 +55,11 @@
     
     <main class="login">
         <div class="login__div">
-            <form class="footer__form" name="form">
-                <h4 class="form__title">Iniciar Sesión</h4>
-                <div class="form__input--div">
-                    <span class="form__input--placeholder">Escriba su dirección de correo electrónico</span>
-                    <input class="form__input" type="text" name="nombre">
-                </div>
-                <div class="form__input--div">
-                    <span class="form__input--placeholder">Ingrese su contraseña</span>
-                    <input class="form__input" type="text" name="nombre">
-                </div>
-                <button type="submit" class="form__button">Enviar mensaje</button>
+            <form class="login__form" name="form">
+                <h4 class="login__title">Iniciar Sesión</h4>
+                <input class="login__input--email" type="email" name="email" placeholder="Escriba su correo electrónico">
+                <input class="login__input--password" type="password" name="contraseña" placeholder="Ingrese su contraseña">
+                <button type="submit" class="login__button--login">Entrar</button>
             </form>   
         </div>    
     </main>

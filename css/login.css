@@ -1,8 +1,19 @@
 .login {
     background-color: var(--color-fondo-login);
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5.75rem 0;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .login {
+        padding: 6rem 0 4.5rem 0;
+    }
+}
+    
+/*mobile*/
+@media only screen and (max-width: 480px) {
+      
 }

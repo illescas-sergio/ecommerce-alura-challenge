@@ -1,0 +1,22 @@
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .login__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        align-items: center;
+    }
+}
+    
+/*mobile*/
+@media only screen and (max-width: 480px) {
+      
+}
