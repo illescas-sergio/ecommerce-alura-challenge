@@ -1,0 +1,5 @@
+.agregar-productos__div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

@@ -1,0 +1,19 @@
+.agregar-productos {
+    background-color: var(--color-fondo-login);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5.75rem 0;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .agregar-productos {
+        padding: 1rem;
+    }
+}
+    
+/*mobile*/
+@media (max-width: 480px) {
+      
+}
