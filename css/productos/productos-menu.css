@@ -1,0 +1,30 @@
+.productos__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productos__title {
+    color: var(--color-fuente);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .productos__title {
+        font-size: 22px;
+        line-height: 26px;
+    }    
+}
+  
+/*mobile*/
+@media only screen and (max-width: 480px) {
+    .productos__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

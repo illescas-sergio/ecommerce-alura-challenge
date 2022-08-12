@@ -1,0 +1,31 @@
+.productos__card {
+    display: flex;
+    flex-direction: column; 
+    border: 1px solid black;   
+}
+
+.productos__card__img {
+    height: 174px;
+    width: 100%;
+}
+
+.productos__card__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0.5rem;
+}
+
+.productos__card__price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0.5rem 0;
+}
+
+.productos__card__details {
+    color: var(--color-botones);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}

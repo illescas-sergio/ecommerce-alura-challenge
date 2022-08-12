@@ -1,0 +1,28 @@
+.productos__items {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0 0 0;
+    width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1rem 0 0 0;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+  .productos__items {
+    grid-template-columns:repeat(4, 1fr) ;
+  }
+}
+  
+/*mobile*/
+@media (max-width: 480px) {
+  .productos__items {
+    grid-template-columns:repeat(2, 1fr) ;
+  }    
+}
+

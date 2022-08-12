@@ -18,10 +18,13 @@
     <link rel="stylesheet" href="./css/header/menu/header-menu-input.css">
     <link rel="stylesheet" href="./css/header/menu/header-search-mobile.css">
 
-    <link rel="stylesheet" href="./css/products.css">
-    <link rel="stylesheet" href="./css/products-group/products-group.css">
-    <link rel="stylesheet" href="./css/products-group/products-menu.css">
-    <link rel="stylesheet" href="./css/products-group/products-items.css">
+    <link rel="stylesheet" href="./css/productos.css">
+    <link rel="stylesheet" href="./css/productos/productos-todos.css">
+    <link rel="stylesheet" href="./css/productos/productos-menu.css">
+    <link rel="stylesheet" href="./css/productos/productos-boton-agregar.css">
+    <link rel="stylesheet" href="./css/productos/productos-items/productos-items.css">
+    <link rel="stylesheet" href="./css/productos/productos-items/cards/productos-cards.css">
+    
     <link rel="stylesheet" href="./css/products-group/products-cards/products-cards.css">
     <link rel="stylesheet" href="./css/products-group/products-cards/products-id.css">
 
@@ -51,151 +54,127 @@
         </section>
     </header>
     
-    <main class="products">
+    <main class="productos">
         <!-- todos los productos -->
-        <section class="products__group container" id="star-wars">
-            <div class="products__menu">
-                <h3 class="products__title">Todos los productos</h3>
-                <button class="products__ver"><div>Ver todo</div><div class="products__ver--flecha"></div></button>
-                <button type="submit" class="form__button">Agregar producto</button>  
+        <section class="productos__todos container">
+            <div class="productos__menu">
+                <h3 class="productos__title">Todos los productos</h3>
+                <button type="submit" class="productos__boton--agregar">Agregar producto</button>  
             </div>
-            <div class="products__items container">
+            <div class="productos__items">
                 <!-- CARD -->
-                <div class="products__cards">
-                    <div class="card__img" id="a01"></div>
-                    <div class="card__title">Producto XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="a01"></div>
+                    <div class="productos__card__title">Producto XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
                 </div>
                 <!-- FIN CARD -->
-                <div class="products__cards">
-                    <div class="card__img" id="a02"></div>
-                    <div class="card__title">Producto XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="a02"></div>
+                    <div class="productos__card__title">Producto XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
                 </div>
-                <div class="products__cards">
-                    <div class="card__img" id="a03"></div>
-                    <div class="card__title">Producto XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="a03"></div>
+                    <div class="productos__card__title">Producto XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
                 </div>
-                <div class="products__cards">
-                    <div class="card__img" id="a04"></div>
-                    <div class="card__title">Producto XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="a04"></div>
+                    <div class="productos__card__title">Producto XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
                 </div>
-                <div class="products__cards erase">
-                    <div class="card__img" id="a05"></div>
-                    <div class="card__title">Producto XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
+                <div class="productos__cards erase">
+                    <div class="productos__card__img" id="a05"></div>
+                    <div class="productos__card__title">Producto XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
                 </div>
-                <div class="products__cards erase">
-                    <div class="card__img" id="a06"></div>
-                    <div class="card__title">Producto XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
+                <div class="productos__cards erase">
+                    <div class="productos__card__img" id="a06"></div>
+                    <div class="productos__card__title">Producto XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="b01"></div>
+                    <div class="productos__card__title">Control XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="b02"></div>
+                    <div class="productos__card__title">Control y Consola XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="b03"></div>
+                    <div class="productos__card__title">Consola XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="b04"></div>
+                    <div class="productos__card__title">Control XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards erase">
+                    <div class="productos__card__img" id="b05"></div>
+                    <div class="productos__card__title">Consola XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards erase">
+                    <div class="productos__card__img" id="b06"></div>
+                    <div class="productos__card__title">Game Boy Color</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="c01"></div>
+                    <div class="productos__card__title">Camisa Atari</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="c02"></div>
+                    <div class="productos__card__title">Camisa SNES</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="c03"></div>
+                    <div class="productos__card__title">Control y Consola XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards">
+                    <div class="productos__card__img" id="c04"></div>
+                    <div class="productos__card__title">Control y Consola XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards erase">
+                    <div class="productos__card__img" id="c05"></div>
+                    <div class="productos__card__title">Control y Consola XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
+                </div>
+                <div class="productos__cards erase">
+                    <div class="productos__card__img" id="c06"></div>
+                    <div class="productos__card__title">Producto XYZ</div>
+                    <div class="productos__card__price">$ 60.00</div>
+                    <a href="" class="productos__card__details">Ver producto</a>
                 </div>
             </div>
         </section>
-
-        <!-- CONSOLAS -->
-        <section class="products__group container" id="consolas">
-            <div class="products__menu">
-                <h3 class="products__title">Consolas</h3>
-                <button class="products__ver"><div>Ver todo</div><div class="products__ver--flecha"></div></button>  
-            </div>
-            <div class="products__items container">
-                <!-- CARD -->
-                <div class="products__cards">
-                    <div class="card__img" id="b01"></div>
-                    <div class="card__title">Control XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <!-- FIN CARD -->
-                <div class="products__cards">
-                    <div class="card__img" id="b02"></div>
-                    <div class="card__title">Control y Consola XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <div class="products__cards">
-                    <div class="card__img" id="b03"></div>
-                    <div class="card__title">Consola XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <div class="products__cards">
-                    <div class="card__img" id="b04"></div>
-                    <div class="card__title">Control XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <div class="products__cards erase">
-                    <div class="card__img" id="b05"></div>
-                    <div class="card__title">Consola XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <div class="products__cards erase">
-                    <div class="card__img" id="b06"></div>
-                    <div class="card__title">Game Boy Color</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- DIVERSOS -->
-        <section class="products__group container" id="diversos">
-            <div class="products__menu">
-                <h3 class="products__title">Diversos</h3>
-                <button class="products__ver"><div>Ver todo</div><div class="products__ver--flecha"></div></button>  
-            </div>
-            <div class="products__items container">
-                <!-- CARD -->
-                <div class="products__cards">
-                    <div class="card__img" id="c01"></div>
-                    <div class="card__title">Camisa Atari</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <!-- FIN CARD -->
-                <div class="products__cards">
-                    <div class="card__img" id="c02"></div>
-                    <div class="card__title">Camisa SNES</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <div class="products__cards">
-                    <div class="card__img" id="c03"></div>
-                    <div class="card__title">Control y Consola XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <div class="products__cards">
-                    <div class="card__img" id="c04"></div>
-                    <div class="card__title">Control y Consola XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <div class="products__cards erase">
-                    <div class="card__img" id="c05"></div>
-                    <div class="card__title">Control y Consola XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-                <div class="products__cards erase">
-                    <div class="card__img" id="c06"></div>
-                    <div class="card__title">Producto XYZ</div>
-                    <div class="card__price">$ 60.00</div>
-                    <a href="" class="card__details">Ver producto</a>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <footer class="footer">

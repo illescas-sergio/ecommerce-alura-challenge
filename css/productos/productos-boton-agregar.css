@@ -1,0 +1,10 @@
+.productos__boton--agregar {
+    background-color: var(--color-botones);
+    border: none;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    height: 50px;
+    line-height: 19px;
+    width: 163px;
+}

@@ -1,0 +1,18 @@
+.productos__todos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+   
+  }
+    
+  /*mobile*/
+  @media (max-width: 480px) {
+    .productos__todos {
+        margin: 0 1rem;
+    }  
+  }
+  
