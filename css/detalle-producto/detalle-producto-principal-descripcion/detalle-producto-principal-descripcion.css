@@ -1,0 +1,20 @@
+.detalle__producto__principal--descripcion {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-fuente);
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    
+}
+  
+/*mobile*/
+@media (max-width: 480px) {
+    .detalle__producto__principal--descripcion {
+        padding: 1rem 0;
+    }  
+}

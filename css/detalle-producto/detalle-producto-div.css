@@ -1,4 +1,18 @@
 .detalle__producto--div {
-    border: 1px solid salmon;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
     width: 100%;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .detalle__producto--div {
+        gap: 2rem;
+    }  
+}
+  
+/*mobile*/
+@media (max-width: 480px) {
+     
 }

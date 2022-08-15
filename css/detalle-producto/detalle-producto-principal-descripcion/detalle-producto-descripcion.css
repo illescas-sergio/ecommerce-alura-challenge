@@ -1,0 +1,19 @@
+.detalle__producto__descripcion {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .detalle__producto__descripcion {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+    } 
+}
+  
+/*mobile*/
+@media (max-width: 480px) {
+    
+}

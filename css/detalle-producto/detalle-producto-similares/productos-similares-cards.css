@@ -1,28 +1,28 @@
-.productos__card {
+.productos__similares--cards {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;    
 }
 
-.productos__card__img {
+.productos__similares__card--img {
     height: 174px;
     width: 100%;
 }
 
-.productos__card__title {
+.productos__similares__card--title {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     margin-top: 0.5rem;
 }
 
-.productos__card__price {
+.productos__similares__card--price {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
     margin: 0.5rem 0;
 }
 
-.productos__card__details {
+.productos__similares__card--details {
     color: var(--color-botones);
     font-weight: 700;
     font-size: 16px;

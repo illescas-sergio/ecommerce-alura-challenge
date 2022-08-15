@@ -1,0 +1,19 @@
+.detalle__producto__titulo {
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 61px;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .detalle__producto__titulo {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+    } 
+}
+  
+/*mobile*/
+@media (max-width: 480px) {
+        
+}

@@ -1,0 +1,15 @@
+.detalle__producto__principal {
+    display: flex;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .detalle__producto__principal {
+        flex-direction: column;
+    } 
+}
+  
+/*mobile*/
+@media (max-width: 480px) {
+    
+}

@@ -1,0 +1,29 @@
+.productos__similares__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productos__similares__title {
+    color: var(--color-fuente);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    .productos__similares__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+    }    
+}
+  
+/*mobile*/
+@media only screen and (max-width: 480px) {
+    .productos__title {
+        font-size: 22px;
+        line-height: 26px;
+    }  
+}
