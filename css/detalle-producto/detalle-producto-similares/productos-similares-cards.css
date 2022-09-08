@@ -8,6 +8,12 @@
     width: 100%;
 }
 
+.productos__similares__card--img img{
+    object-fit: cover;
+    height: 174px;
+    width: 100%;
+}
+
 .productos__similares__card--title {
     font-weight: 500;
     font-size: 14px;

@@ -1,8 +1,17 @@
 .detalle__producto__principal--img {
-    background: url("../../assets/products/unsplash_0POwK6iAiRQ.png") no-repeat center / cover;
+    display: flex;
+    background-color: lightgray;
+    justify-content: center;
     height: 403px;
     width: 100%;
 }
+
+.detalle__producto__principal--img img {
+    object-fit: cover;
+    height: 100%;
+    
+}
+
 
 /*tablet*/
 @media (max-width: 768px) {

@@ -43,7 +43,9 @@
     <header class="header">
         <section class="header__menu container">
             <div class="header__logo">
-                <img src="../assets/Logo.png" alt="" class="header__logo__img">
+                <a href="../index.html">
+                    <img src="../assets/Logo.png" alt="" class="header__logo__img">
+                </a>
                 <div class="header__menu__search">
                     <input class="header__menu__input"  type="text" placeholder="¿Qué deseas buscar?">
                     <img src="../assets/lupa.png" alt="">
@@ -58,18 +60,22 @@
         <section class="productos__todos container">
             <div class="productos__menu">
                 <h3 class="productos__title">Todos los productos</h3>
-                <button type="submit" class="productos__boton--agregar">Agregar producto</button>  
+                <a href="agregar-productos.html">
+                    <button type="submit" class="productos__boton--agregar">Agregar producto</button>
+                </a>
             </div>
-            <div class="productos__items">
+            <div class="productos__items" data-items>
                 <!-- CARD -->
-                <div class="productos__cards">
-                    <div class="productos__card__img" id="a01"></div>
+                <!-- <div class="productos__cards">
+                    <div class="productos__card__img">
+                        <img src="/assets/products/unsplash_6FDXGY9J6y4.png" alt="${name}">
+                    </div>
                     <div class="productos__card__title">Producto XYZ</div>
                     <div class="productos__card__price">$ 60.00</div>
                     <a href="" class="productos__card__details">Ver producto</a>
-                </div>
+                </div> -->
                 <!-- FIN CARD -->
-                <div class="productos__cards">
+                <!-- <div class="productos__cards">
                     <div class="productos__card__img" id="a02"></div>
                     <div class="productos__card__title">Producto XYZ</div>
                     <div class="productos__card__price">$ 60.00</div>
@@ -170,7 +176,7 @@
                     <div class="productos__card__title">Producto XYZ</div>
                     <div class="productos__card__price">$ 60.00</div>
                     <a href="" class="productos__card__details">Ver producto</a>
-                </div>
+                </div> -->
             </div>
         </section>
         
@@ -209,7 +215,10 @@
                 <p>2022</p>
             </div>
         </section>
-    </footer>    
+    </footer> 
+    
+    <script type="module" src="../controllers/productos-controller.js"></script>
+    <script type="module" src="../service/client-service.js"></script>
     
 </body>
 </html>

@@ -8,6 +8,11 @@
     width: 100%;
 }
 
+.productos__card__img img{
+    height: 174px;
+    width: 100%;
+}
+
 .productos__card__title {
     font-weight: 500;
     font-size: 14px;

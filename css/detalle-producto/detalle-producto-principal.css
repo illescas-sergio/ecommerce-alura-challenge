@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.detalle__producto__principal--div {
+    display: flex;
+}
+
 /*tablet*/
 @media (max-width: 768px) {
     .detalle__producto__principal {

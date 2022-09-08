@@ -48,7 +48,9 @@
     <header class="header">
         <section class="header__menu container">
             <div class="header__logo">
-                <img src="../assets/Logo.png" alt="" class="header__logo__img">
+                <a href="../index.html">
+                    <img src="../assets/Logo.png" alt="" class="header__logo__img">
+                </a>                
                 <div class="header__menu__search">
                     <input class="header__menu__input"  type="text" placeholder="¿Qué deseas buscar?">
                     <img src="../assets/lupa.png" alt="">
@@ -58,31 +60,34 @@
         </section>
     </header>
 
-    <main class="detalle__producto">
-        <div class="detalle__producto--div">
-            <!-- <div class="detalle__producto__principal--img"></div> -->
-            <section class="detalle__producto__principal container">
-                <div class="detalle__producto__principal--img"></div>
-                <div class="detalle__producto__principal--descripcion">
-                    <div class="detalle__producto__titulo">Producto XYZ</div>
-                    <div class="detalle__producto__precio">$ 60.00</div>
-                    <div class="detalle__producto__descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim maxime consectetur eveniet aut voluptatem voluptatum minus debitis. Vitae doloremque iste nam est, voluptatem voluptas, commodi quia eum totam quaerat hic!</div>
-                </div>
-
+    <main class="detalle__producto" >
+        <div class="detalle__producto--div">            
+            <section class="detalle__producto__principal container" data-detalle>
+                <!-- <div class="detalle__producto__principal--div">
+                    <div class="detalle__producto__principal--img">
+                        <img src="/assets/products/unsplash_0POwK6iAiRQ.png" alt="">
+                    </div>
+                    <div class="detalle__producto__principal--descripcion">
+                        <div class="detalle__producto__titulo">Producto XYZ</div>
+                        <div class="detalle__producto__precio">$ 60.00</div>
+                        <div class="detalle__producto__descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim maxime consectetur eveniet aut voluptatem voluptatum minus debitis. Vitae doloremque iste nam est, voluptatem voluptas, commodi quia eum totam quaerat hic!</div>
+                    </div>
+                </div> -->
             </section>
             <section class="detalle__productos-similares container">
                 <div class="productos__similares__menu">
                     <h3 class="productos__similares__title">Productos similares</h3>
                 </div>
-                <div class="productos__similares--items">
-                    <!-- CARD -->
-                    <div class="productos__similares--cards">
+
+                <div class="productos__similares--items" data-similares>
+                    
+                    <!-- <div class="productos__similares--cards">
                         <div class="productos__similares__card--img" id="a01"></div>
                         <div class="productos__similares__card--title">Producto XYZ</div>
                         <div class="productos__similares__card--price">$ 60.00</div>
                         <a href="" class="productos__similares__card--details">Ver producto</a>
                     </div>
-                    <!-- FIN CARD -->
+                    
                     <div class="productos__cards">
                         <div class="productos__similares__card--img" id="a02"></div>
                         <div class="productos__similares__card--title">Producto XYZ</div>
@@ -112,9 +117,9 @@
                         <div class="productos__similares__card--title">Producto XYZ</div>
                         <div class="productos__similares__card--price">$ 60.00</div>
                         <a href="" class="productos__similares__card--details">Ver producto</a>
-                    </div>
+                    </div> -->
                 </div>
-            </section>
+            </section>  
 
         </div>
 
@@ -155,6 +160,9 @@
             </div>
         </section>
     </footer>
+
+    <script type="module" src="../controllers/detalleProducto-controller.js"></script>
+    <script type="module" src="../service/client-service.js"></script>
 
 </body>
 </html>

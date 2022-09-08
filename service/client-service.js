@@ -1,18 +1,22 @@
-console.log("Hola Soy Client-Service");
 
-const cargaIndex = () => {
-    return fetch('http://localhost:3000/producto')
-    .then(response => response.json())
-    .then(data => {
-        data.forEach(el => {
-            console.log(el)
-        })
-    })
+
+const todosLosProductos = () => {
+    return fetch('http://localhost:3000/producto');
 }
 
-cargaIndex();
+const detalleProducto = (id) => {
+    return fetch(`http://localhost:3000/producto?id=${id}`);
+}
+
+const productosSimilares = (sectionId) => {
+    return fetch(`http://localhost:3000/producto?id=${sectionId}`);
+}
 
 
-const productContainer = document.querySelector("#star-wars");
+export const clienteService = {
+    todosLosProductos,
+    detalleProducto,
+    productosSimilares
+}
 
-console.log(productContainer)
+
