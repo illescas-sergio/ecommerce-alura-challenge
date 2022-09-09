@@ -57,12 +57,15 @@
             <div class="header__search__mobile"><img class="search__mobile" src="../assets/lupa.png" alt=""></div>
         </section>
         <section class="header__banner">
-            <div class="banner">
-                <div class="banner__text container">
+            <div class="banner" data-banner>
+                <!-- Voy a generar dinamicamente este div para que sea más fácil cambiar el texto del banner -->
+
+
+                <!-- <div class="banner__text container">
                     <h1 class="banner__title">Febrero Promocional</h1>
                     <p class="banner__subtitle">Productos seleccionados con 33% de descuento</p>
-                    <a href="#consolas"><button class="banner__boton--ver">Ver Consolas</button></a>
-                </div>
+                    <a href="/screens/promocionados.html?sectionId=consolas"><button class="banner__boton--ver">Ver Consolas</button></a>
+                </div> -->
             </div>
         </section>
     </header>
@@ -122,7 +125,7 @@
         <section class="products__group container" id="consolas">
             <div class="products__menu">
                 <h3 class="products__title">Consolas</h3>
-                <a href="./screens/productos.html">
+                <a href="/screens/productos.html">
                     <button class="products__ver"><div>Ver todo</div><div class="products__ver--flecha"></div></button>
                 </a> 
             </div>
@@ -252,7 +255,9 @@
                 <p>2022</p>
             </div>
         </section>
-    </footer>   
+    </footer> 
+    
+    <script type="module" src="./controllers/index-controller.js"></script>
     
 </body>
 </html>
