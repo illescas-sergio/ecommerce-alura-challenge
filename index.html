@@ -48,11 +48,11 @@
             <div class="header__logo">
                 <img src="../assets/Logo.png" alt="" class="header__logo__img">
                 <div class="header__menu__search">
-                    <input class="header__menu__input"  type="text" placeholder="¿Qué deseas buscar?">
-                    <img src="../assets/lupa.png" alt="">
+                    <input class="header__menu__input"  type="text" placeholder="¿Qué deseas buscar?" data-searchInput>
+                    <button data-searchButton><img src="../assets/lupa.png" alt=""></button>                    
                 </div>                
             </div>
-            <a href="./screens/login.html"><button class="header__boton--login">Login</button></a>
+            <a href="/screens/login.html"><button class="header__boton--login">Login</button></a>
             
             <div class="header__search__mobile"><img class="search__mobile" src="../assets/lupa.png" alt=""></div>
         </section>
@@ -75,11 +75,11 @@
         <section class="products__group container" id="star-wars">
             <div class="products__menu">
                 <h3 class="products__title">Star Wars</h3>
-                <a href="./screens/productos.html">
+                <a href="/screens/productos.html">
                     <button class="products__ver"><div>Ver todo</div><div class="products__ver--flecha"></div></button>
                 </a>                  
             </div>
-            <div class="products__items container" data-starWars>
+            <div class="products__items container" data-tipo="star-wars">
                 <!-- CARD -->
                 <!-- <div class="products__cards" data-card>
                     <div class="card__img" ><img src="/assets/products/unsplash_6FDXGY9J6y4.png" alt="producto XYZ"></div>
@@ -129,7 +129,7 @@
                     <button class="products__ver"><div>Ver todo</div><div class="products__ver--flecha"></div></button>
                 </a> 
             </div>
-            <div class="products__items container" data-consolas>
+            <div class="products__items container" data-tipo="consolas">
                 <!-- CARD -->
                 <!-- <div class="products__cards">
                     <div class="card__img" id="b01"></div>
@@ -175,11 +175,11 @@
         <section class="products__group container" id="diversos">
             <div class="products__menu">
                 <h3 class="products__title">Diversos</h3>
-                <a href="./screens/productos.html">
+                <a href="/screens/productos.html">
                     <button class="products__ver"><div>Ver todo</div><div class="products__ver--flecha"></div></button>
                 </a> 
             </div>
-            <div class="products__items container" data-diversos>
+            <div class="products__items container" data-tipo="diversos">
                 <!-- CARD -->
                 <!-- <div class="products__cards">
                     <div class="card__img" id="c01"></div>
@@ -256,7 +256,8 @@
             </div>
         </section>
     </footer> 
-    
+
+    <script type="module" src="./controllers/search-controller.js"></script>
     <script type="module" src="./controllers/index-controller.js"></script>
     <script type="module" src="./service/client-service.js"></script>
     

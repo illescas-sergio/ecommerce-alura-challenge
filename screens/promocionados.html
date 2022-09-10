@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="../css/footer/footer-flex/footer-contact/footer-contact.css">
     <link rel="stylesheet" href="../css/footer/footer-flex/footer-contact/footer-form.css">
 
-    <title>Productos - Alura Geek</title>
+    <title>Promocionados - Alura Geek</title>
 
 
 </head>
@@ -47,8 +47,8 @@
                     <img src="../assets/Logo.png" alt="" class="header__logo__img">
                 </a>
                 <div class="header__menu__search">
-                    <input class="header__menu__input"  type="text" placeholder="¿Qué deseas buscar?">
-                    <img src="../assets/lupa.png" alt="">
+                    <input class="header__menu__input"  type="text" placeholder="¿Qué deseas buscar?" data-searchInput>
+                    <button data-searchButton><img src="../assets/lupa.png" alt=""></button>
                 </div>                
             </div>
             <div class="header__search__mobile"><img class="search__mobile" src="../assets/lupa.png" alt=""></div>
@@ -219,7 +219,8 @@
             </div>
         </section>
     </footer> 
-    
+
+    <script type="module" src="../controllers/search-controller.js"></script>
     <script type="module" src="../controllers/promocionados-controller.js"></script>
     <script type="module" src="../service/client-service.js"></script>
     

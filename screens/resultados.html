@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="../css/footer/footer-flex/footer-contact/footer-contact.css">
     <link rel="stylesheet" href="../css/footer/footer-flex/footer-contact/footer-form.css">
 
-    <title>Productos - Alura Geek</title>
+    <title>Resultados - Alura Geek</title>
 
 
 </head>
@@ -56,14 +56,17 @@
     </header>
     
     <main class="productos">
-        <!-- todos los productos -->
+        
         <section class="productos__todos container">
-            <div class="productos__menu">
-                <h3 class="productos__title">Todos los productos</h3>
-                <a href="agregar-productos.html">
-                    <button type="submit" class="productos__boton--agregar">Agregar producto</button>
-                </a>
+            <div class="productos__todos" data-titulo>
+                <div class="productos__menu">
+                    <h3 class="productos__title">Resultados</h3>
+                    <a href="agregar-productos.html">
+                        <button type="submit" class="productos__boton--agregar">Agregar producto</button>
+                    </a>
+                </div>
             </div>
+            
             <div class="productos__items" data-items>
                 <!-- CARD -->
                 <!-- <div class="productos__cards">
@@ -216,8 +219,9 @@
             </div>
         </section>
     </footer> 
-    
-    <script type="module" src="../controllers/productos-controller.js"></script>
+
+    <script type="module" src="../controllers/search-controller.js"></script>
+    <script type="module" src="../controllers/resultados-controller.js"></script>
     <script type="module" src="../service/client-service.js"></script>
     
 </body>

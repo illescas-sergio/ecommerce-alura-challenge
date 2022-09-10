@@ -34,9 +34,6 @@ const nuevoTitulo = () => {
 
 divTitulo.appendChild(nuevoTitulo());
 
-console.log(divTitulo)
-
-
 const nuevaCard = (imageUrl, name, price, id, sectionId) => {
     const card = document.createElement('div');
     card.classList.add("productos__card")

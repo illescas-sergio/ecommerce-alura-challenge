@@ -1,7 +1,11 @@
 .header__menu__input {
     background-color: var(--color-fondo-noTanBlanco);
     border: none;
-    height: 100%;
+    height: 130%;
+}
+
+.header__menu__input:focus {
+    outline: none;
 }
 
 

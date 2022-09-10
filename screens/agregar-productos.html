@@ -46,8 +46,8 @@
                     <img src="../assets/Logo.png" alt="" class="header__logo__img">
                 </a>                
                 <div class="header__menu__search">
-                    <input class="header__menu__input"  type="text" placeholder="¿Qué deseas buscar?">
-                    <img src="../assets/lupa.png" alt="">
+                    <input class="header__menu__input"  type="text" placeholder="¿Qué deseas buscar?" data-searchInput>
+                    <button data-searchButton><img src="../assets/lupa.png" alt=""></button>
                 </div>                
             </div>
             <button class="header__boton--admin">Menú administrador</button>
@@ -116,7 +116,9 @@
                 <p>2022</p>
             </div>
         </section>
-    </footer>    
+    </footer>  
+    
+    <script type="module" src="../controllers/search-controller.js"></script>
     
 </body>
 </html>

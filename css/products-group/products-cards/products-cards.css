@@ -9,6 +9,13 @@
     
 }
 
+.card__img img{
+    object-fit: cover;
+    height: 174px;
+    width: 100%;
+    
+}
+
 .card__title {
     font-weight: 500;
     font-size: 14px;

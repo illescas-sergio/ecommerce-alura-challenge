@@ -11,6 +11,11 @@
     width: 24.5625rem;
 }
 
+.header__menu__search button {
+    background-color: var(--color-fondo-noTanBlanco);
+    border: none;
+}
+
 /*tablet*/
 @media (max-width: 768px) {
     .header__menu__search {
