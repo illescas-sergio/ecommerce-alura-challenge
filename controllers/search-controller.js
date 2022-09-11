@@ -4,7 +4,6 @@ const botonBusqueda = document.querySelector("[data-searchButton]");
 let valorBusqueda;
 
 inputBusqueda.addEventListener('keyup', (e) => {
-    console.log(e.target.value)
     valorBusqueda = e.target.value;
 })
 

@@ -2,6 +2,7 @@
     background-color: var(--color-fondo-noTanBlanco);
     border: none;
     height: 130%;
+    width: 85%;
 }
 
 .header__menu__input:focus {

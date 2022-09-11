@@ -12,7 +12,7 @@ const productosSimilares = (sectionId) => {
     return fetch(`http://localhost:3000/producto?id=${sectionId}`);
 };
 
-const crearProducto = (name, imageUrl, price, id = uuid.v4(), sectionId, description) => {
+const agregarProducto = (name, imageUrl, price, id = uuid.v4(), sectionId, description) => {
     return fetch("http://localhost:3000/producto", {
         method: "POST",
         headers: {"content-type": "aplication/json"},

@@ -33,6 +33,10 @@
     line-height: 20px;
 }
 
+.form__input:focus {
+    outline: none;
+}
+
 .form__input--placeholder {
     color: var(--color-placeholder);
     font-family: 'Raleway';
@@ -44,9 +48,13 @@
 
 .form__textarea {
     border: none;
-    border-bottom: 1px solid #c8c8c8;
+    /* border-bottom: 1px solid #c8c8c8; */
     margin: 0.5rem 0;
     padding: 1rem 0.75rem;
+}
+
+.form__textarea:focus {
+    outline: none;
 }
 
 .form__textarea::placeholder {
@@ -66,6 +74,10 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+}
+
+.activeInput {
+    border-bottom: var(--color-fuente);
 }
 
 /*tablet*/
