@@ -36,25 +36,6 @@ const eliminarProducto = (id) => {
     });
 };
 
-const buscarProductos = (str) => {
-    return fetch('http://localhost:3000/producto')
-    .then(resp => resp.json())
-    .then(res => {
-
-    })
-    
-clienteService.todosLosProductos().then(resp => resp.json()).then(res => {
-    return res.filter(el => el.sectionId === sectionId);
-    }).then(arr => {
-        arr.forEach(({imageUrl, name, price, id, sectionId}) => {
-           const producto = nuevaCard(imageUrl, name, price, id, sectionId);
-           containerProductos.appendChild(producto);
-        })
-    });
-}
-
-
-
 export const clienteService = {
     todosLosProductos,
     detalleProducto,

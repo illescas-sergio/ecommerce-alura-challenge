@@ -1,13 +1,9 @@
 import { clienteService } from "../service/client-service.js";
-import { valorBusqueda } from "./search-controller.js";
 
+const urlSearchParams = new URLSearchParams(window.location.search);
+const searchValue = urlSearchParams.get("value");
 
 const containerResultados = document.querySelector("[data-items]");
-
-const inputValue = valorBusqueda();
-
-console.log(inputValue);
-
 
 const nuevaCard = (imageUrl, name, price, id) => {
     const card = document.createElement('div');
@@ -27,29 +23,34 @@ const nuevaCard = (imageUrl, name, price, id) => {
     card.innerHTML = divsTemplate;
 
     return card
+};
+
+const ceroResultados = () => {
+
+    const card = document.createElement('div');
+    
+    const template = `
+        
+    <h5 class="productos__title">No hay resultados</h5>
+        
+    `
+    card.innerHTML = template;
+
+    return card
 }
 
+
 clienteService.todosLosProductos().then(resp => resp.json()).then(res => {
-    console.log(res)
-    return res.filter(el => el.name === inputValue);
+    return res.filter(el => el.name.toLowerCase().includes(searchValue.toLowerCase()));
     }).then(arr => {
-        console.log(arr)
-        arr.forEach(({imageUrl, name, price, id}) => {
-           const producto = nuevaCard(imageUrl, name, price, id);
-           containerResultados.appendChild(producto);
-        })
+        if(arr.length === 0){
+            const producto = ceroResultados();
+            containerResultados.append(producto);
+        } else {
+            arr.forEach(({imageUrl, name, price, id}) => {
+                const producto = nuevaCard(imageUrl, name, price, id);
+                containerResultados.appendChild(producto);
+             })
+        }
+        
     });
-
-
-
-
-// clienteService.todosLosProductos().then(resp => resp.json()).then(res => {
-//     console.log(res)
-//     return res.filter(el => el.name.toLowerCase().includes(inputValue.toLowerCase()));
-//     }).then(arr => {
-//         console.log(arr)
-//         arr.forEach(({imageUrl, name, price, id}) => {
-//            const producto = nuevaCard(imageUrl, name, price, id);
-//            containerResultados.appendChild(producto);
-//         })
-//     });
