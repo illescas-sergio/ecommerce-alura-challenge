@@ -17,6 +17,10 @@ const detalle = (imageUrl, name, price, id, sectionId, description) => {
         <img src=${imageUrl} alt="${name}">
         </div>
         <div class="detalle__producto__principal--descripcion">
+            <div class="detalle__menu-extra">
+                <a href="/screens/editar-producto.html?id=${id}"><button class="boton-modificar">Editar</button></a>
+                <button class="boton-eliminar"><i class="fa-regular fa-trash-can"></i></button>
+            </div>
             <div class="detalle__producto__titulo">${name}</div>
             <div class="detalle__producto__precio">${price}</div>
             <div class="detalle__producto__descripcion">${description}</div>

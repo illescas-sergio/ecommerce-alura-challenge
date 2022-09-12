@@ -8,10 +8,6 @@ const detalleProducto = (id) => {
     return fetch(`http://localhost:3000/producto?id=${id}`);
 };
 
-const productosSimilares = (sectionId) => {
-    return fetch(`http://localhost:3000/producto?id=${sectionId}`);
-};
-
 const agregarProducto = (name, imageUrl, price, id = uuid.v4(), sectionId, description) => {
     return fetch("http://localhost:3000/producto", {
         method: "POST",
@@ -20,11 +16,11 @@ const agregarProducto = (name, imageUrl, price, id = uuid.v4(), sectionId, descr
     });
 };
 
-const modificarProducto = (name, imageUrl, price, sectionId, description) => {
+const modificarProducto = (name, imageUrl, price, sectionId, description, id) => {
     return fetch(`http://localhost:3000/producto?id=${id}`, {
         method: "PUT",
         headers: {"content-type": "aplication/json"},
-        body: JSON.stringify({name, imageUrl, price, id: uuid.v4(), sectionId, description})
+        body: JSON.stringify({name, imageUrl, price, id, sectionId, description})
     });
 };
 
@@ -39,7 +35,7 @@ const eliminarProducto = (id) => {
 export const clienteService = {
     todosLosProductos,
     detalleProducto,
-    productosSimilares
+    modificarProducto
 };
 
 

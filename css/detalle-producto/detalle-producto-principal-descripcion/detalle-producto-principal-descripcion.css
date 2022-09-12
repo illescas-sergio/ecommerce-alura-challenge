@@ -1,8 +1,8 @@
 .detalle__producto__principal--descripcion {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    justify-content: center;
+    padding: 0 0 1rem 1rem;
+    justify-content: space-between;
     gap: 0.5rem;
     color: var(--color-fuente);
 }

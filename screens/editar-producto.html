@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css">
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/header/header-menu.css">
+    <link rel="stylesheet" href="../css/header/menu/header-logo.css">
+    <link rel="stylesheet" href="../css/header/menu/header-menu-search.css">
+    <link rel="stylesheet" href="../css/header/menu/header-menu-input.css">
+    <link rel="stylesheet" href="../css/agregar-productos/agregar-productos-header/menu-agregar-productos.css">
+    <link rel="stylesheet" href="../css/header/menu/header-search-mobile.css">
+
+    <link rel="stylesheet" href="../css/agregar-productos.css">
+    <link rel="stylesheet" href="../css/agregar-productos/agregar-productos-div.css">
+    <link rel="stylesheet" href="../css/agregar-productos/agregar-productos-form.css">
+    <link rel="stylesheet" href="../css/agregar-productos/agreagar-productos-form/agregar-productos-title.css">
+    <link rel="stylesheet" href="../css/agregar-productos/agreagar-productos-form/agregar-productos-input.css">
+    <link rel="stylesheet" href="../css/agregar-productos/agreagar-productos-form/agregar-productos-button.css">
+
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/footer/footer-poweredBy.css">
+    <link rel="stylesheet" href="../css/footer/footer-content.css">   
+    <link rel="stylesheet" href="../css/footer/footer-flex/footer__flex.css">
+    <link rel="stylesheet" href="../css/footer/footer-flex/footer-links/footer-links.css">
+    <link rel="stylesheet" href="../css/footer/footer-flex/footer-contact/footer-contact.css">
+    <link rel="stylesheet" href="../css/footer/footer-flex/footer-contact/footer-form.css">
+
+    <title>Editar Producto - Alura Geek</title>
+
+
+</head>
+<body>
+    <header class="header">
+        <section class="header__menu container">
+            <div class="header__logo">
+                <a href="../index.html">
+                    <img src="../assets/Logo.png" alt="" class="header__logo__img">
+                </a>                
+                <div class="header__menu__search">
+                    <input class="header__menu__input"  type="text" placeholder="¿Qué deseas buscar?" data-searchInput>
+                    <button data-searchButton><img src="../assets/lupa.png" alt=""></button>
+                </div>                
+            </div>
+            <button class="header__boton--admin">Menú administrador</button>
+            <div class="header__search__mobile"><img class="search__mobile" src="../assets/lupa.png" alt=""></div>
+        </section>
+    </header>
+    
+    <main class="agregar-productos">
+        <div class="agregar-productos__div container">
+            <form class="agregar-productos__form" name="form" data-formEditar>
+                <h4 class="agregar-productos__title">Modificar Producto</h4>
+
+                <div class="agregar-productos__input--div">
+                    <span class="agregar-productos__input--placeholder">Url de imagen</span>
+                    <input class="agregar-productos__input" type="text" name="nombre" data-url>
+                </div>
+                <div class="agregar-productos__input--div">
+                    <span class="agregar-productos__input--placeholder">Categoría</span>
+                    <input class="agregar-productos__input" type="text" name="nombre" data-sectionId>
+                </div>
+                <div class="agregar-productos__input--div">
+                    <span class="agregar-productos__input--placeholder">Nombre del producto</span>
+                    <input class="agregar-productos__input" type="text" name="nombre" data-name>
+                </div>
+                <div class="agregar-productos__input--div">
+                    <span class="agregar-productos__input--placeholder">Precio del producto</span>
+                    <input class="agregar-productos__input" type="text" name="nombre" data-price>
+                </div>
+                <textarea class="agregar-productos__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Descripción del producto" data-description></textarea>
+                <button type="submit" class="agregar-productos__button" data-enviarEdicion>Aceptar</button>
+            </form>   
+        </div>    
+    </main>
+
+    <footer class="footer">
+        <section class="footer__content" >
+            <div class="footer__flex container">
+                <div class="footer__logo">
+                    <img src="../assets/Logo.png" alt="" class="footer__logo__img">
+                </div>
+                <div class="footer__links">
+                    <a class="footer__links--item" href="">Quienes somos</a>
+                    <a class="footer__links--item" href="">Política de privacidad</a>
+                    <a class="footer__links--item" href="">Programa de fidelidad</a>
+                    <a class="footer__links--item" href="">Nuestras tiendas</a>
+                    <a class="footer__links--item" href="">Quiero ser franquiciado</a>
+                    <a class="footer__links--item" href="">Anuncie aquí</a>
+                </div>
+                <div class="footer__contact">
+                    <form class="footer__form" name="form">
+                        <h4 class="form__title">Hable con nosotros</h4>
+                        <div class="form__input--div">
+                            <span class="form__input--placeholder">Nombre</span>
+                            <input class="form__input" type="text" name="nombre">
+                        </div>
+                        <textarea class="form__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
+                        <button type="submit" class="form__button">Enviar mensaje</button>
+                    </form>   
+                </div>
+            </div>
+        </section>
+        <section class="footer__powered-by">
+            <div class="powered-by__author">
+                <p class="powered-by__author--text">Desarrollado por Sergio Illescas</p> 
+                <p>2022</p>
+            </div>
+        </section>
+    </footer>  
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../controllers/search-controller.js"></script>
+    <script type="module" src="../controllers/editar-producto-controller.js"></script>
+    <script type="module" src="../service/client-service.js"></script>    
+    
+</body>
+</html>
