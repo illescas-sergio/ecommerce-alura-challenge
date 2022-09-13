@@ -48,22 +48,15 @@ export const clienteService = {
     todosLosProductos,
     detalleProducto,
     modificarProducto,
-    agregarProducto
+    agregarProducto,
+    eliminarProducto
 };
 
 //saco los return porque en las funciones flecha el return está implicito:
     //y queda todo en una linea
 
 
-    // const crearCliente = (nombre, email) => {
-    //         return fetch("http://localhost:3000/perfil", {
-    //             method: "POST",
-    //             headers: {
-    //                 "content-type": "application/json"
-    //             },
-    //             body: JSON.stringify({nombre, email, id: uuid.v4()})
-    //         })
-    // }
+
     
     // const eliminarCliente = (id) => {
         

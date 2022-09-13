@@ -54,13 +54,6 @@ crearProducto.addEventListener('click', (e)=>{
    console.log("voy a enviar esto");
    console.log(valores);
    clienteService.agregarProducto(name, imageUrl, price, sectionId, description)
-})
-
-
-// const agregarProducto = (name, imageUrl, price, id = uuid.v4(), sectionId, description) => {
-//     return fetch("http://localhost:3000/producto", {
-//         method: "POST",
-//         headers: {"Content-Type": "application/json"},
-//         body: JSON.stringify({name, imageUrl, price, id, sectionId, description})
-//     });
-// };
+   .then(resp => console.log(resp));
+   window.location.href = "../index.html";
+});
