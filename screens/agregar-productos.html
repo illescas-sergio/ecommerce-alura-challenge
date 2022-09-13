@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../css/agregar-productos/agregar-productos-form.css">
     <link rel="stylesheet" href="../css/agregar-productos/agreagar-productos-form/agregar-productos-title.css">
     <link rel="stylesheet" href="../css/agregar-productos/agreagar-productos-form/agregar-productos-input.css">
+    <link rel="stylesheet" href="../css/agregar-productos/agreagar-productos-form/agregar-productos-input-browse.css">
     <link rel="stylesheet" href="../css/agregar-productos/agreagar-productos-form/agregar-productos-button.css">
 
     <link rel="stylesheet" href="../css/footer.css">
@@ -57,28 +58,30 @@
     
     <main class="agregar-productos">
         <div class="agregar-productos__div container">
-            <form class="agregar-productos__form" name="form" data-formCrear>
-                <h4 class="agregar-productos__title">Modificar Producto</h4>
-
+            <form class="agregar-productos__form" name="form">
+                <h4 class="agregar-productos__title">Agregar nuevo producto</h4>
+                
                 <div class="agregar-productos__input--div">
                     <span class="agregar-productos__input--placeholder">Url de imagen</span>
-                    <input class="agregar-productos__input" type="text" name="url" data-url>
+                    <input class="agregar-productos__input" type="file" name="url" id="browse" data-url>
                 </div>
                 <div class="agregar-productos__input--div">
                     <span class="agregar-productos__input--placeholder">Categoría</span>
-                    <input class="agregar-productos__input" type="text" name="categoria" data-sectionId>
+                    <input class="agregar-productos__input" type="text" name="categoria" data-categoria>
                 </div>
                 <div class="agregar-productos__input--div">
                     <span class="agregar-productos__input--placeholder">Nombre del producto</span>
-                    <input class="agregar-productos__input" type="text" name="nombre" data-name>
+                    <input class="agregar-productos__input" type="text" name="nombre" data-nombre>
                 </div>
                 <div class="agregar-productos__input--div">
                     <span class="agregar-productos__input--placeholder">Precio del producto</span>
-                    <input class="agregar-productos__input" type="text" name="precio" data-price>
+                    <input class="agregar-productos__input" type="text" name="precio" data-precio>
                 </div>
-                <textarea class="agregar-productos__textarea" rows="5" cols="40" id="mensagem" name="descripcion" placeholder="Descripción del producto" data-description></textarea>
-                <button type="submit" class="agregar-productos__button" data-enviarEdicion>Aceptar</button>
-            </form> 
+                <textarea class="agregar-productos__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Descripción del producto" data-descripcion></textarea>
+
+                <button type="submit" class="agregar-productos__button" data-botonAgregar>Agregar producto</button>
+                
+            </form>   
         </div>    
     </main>
 

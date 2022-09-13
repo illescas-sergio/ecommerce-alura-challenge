@@ -5,7 +5,7 @@ const todosLosProductos = () => {
 };
 
 const detalleProducto = (id) => {
-    return fetch(`http://localhost:3000/producto?id=${id}`);
+    return fetch(`http://localhost:3000/producto/?id=${id}`);
 };
 
 const agregarProducto = (name, imageUrl, price, id = uuid.v4(), sectionId, description) => {
@@ -47,7 +47,51 @@ const eliminarProducto = (id) => {
 export const clienteService = {
     todosLosProductos,
     detalleProducto,
-    modificarProducto
+    modificarProducto,
+    agregarProducto
 };
 
+//saco los return porque en las funciones flecha el return está implicito:
+    //y queda todo en una linea
 
+
+    // const crearCliente = (nombre, email) => {
+    //         return fetch("http://localhost:3000/perfil", {
+    //             method: "POST",
+    //             headers: {
+    //                 "content-type": "application/json"
+    //             },
+    //             body: JSON.stringify({nombre, email, id: uuid.v4()})
+    //         })
+    // }
+    
+    // const eliminarCliente = (id) => {
+        
+    //         return fetch(`http://localhost:3000/perfil/${id}`, {
+    //             method: "DELETE",
+    //         });
+    // }
+    
+    // const actualizarCliente = (nombre, email, id) => {
+    
+    //         return fetch(`http://localhost:3000/perfil/${id}`, {
+    //             method: "PUT",
+    //             headers: {
+    //                 "content-type": "application/json"
+    //             },
+    //             body: JSON.stringify({nombre, email})
+    //         })
+    //         .then(respuesta => respuesta)
+    //         .catch(err => console.log(err));
+    // }
+    
+    
+    
+    // export const clientServices = {
+    //     listaClientes,
+    //     crearCliente,
+    //     eliminarCliente,
+    //     detalleCliente,
+    //     actualizarCliente
+    // };
+    
