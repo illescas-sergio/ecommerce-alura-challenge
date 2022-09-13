@@ -9,38 +9,52 @@ const urlImagenProducto = document.querySelector("[data-url]");
 const categoriaProducto = document.querySelector("[data-sectionId]");
 const nombreProducto = document.querySelector("[data-name]");
 const precioProducto = document.querySelector("[data-price]");
-const descripcionProducto = document.getElementById("mensagem");
+const descripcionProducto = document.querySelector("[data-description]");
 
 const enviarEdicionProducto = document.querySelector("[data-enviarEdicion]");
-
-function mostrarInput(e){
-    console.log(e.target.value)
-}
 
 const inputs = document.querySelectorAll('input');
 
 inputs.forEach(input => {
-    input.addEventListener('change', (e) => mostrarInput(e));
+    input.addEventListener('change', (e) => guardarInput(e));
 });
 
-descripcionProducto.addEventListener('change', () => {
-    const texto = descripcionProducto.value;
-    console.log(texto)
-})
+descripcionProducto.addEventListener('change', (e) => guardarInput(e));
+
+const valores = {
+    url: "",
+    categoria: "",
+    nombre: "",
+    precio: "",
+    descripcion: "",
+    id: idProducto
+};
+
+function guardarInput(e){
+    valores[e.target.name] = e.target.value;
+}
 
 
-enviarEdicionProducto.addEventListener('click', (e)=>{
+function obtenerDataProducto(idProducto){
+    clienteService.detalleProducto(idProducto).then((resp) => resp.json())
+    .then(data => {
+        console.log(data);
+        data.forEach(item => {
+
+        urlImagenProducto.value = item.imageUrl;
+        categoriaProducto.value = item.sectionId;
+        nombreProducto.value = item.name;
+        precioProducto.value = item.price;
+        descripcionProducto.value = item.description;
+        });
+        
+    });
+}
+
+obtenerDataProducto(idProducto)
+
+formularioEditar.addEventListener("submit", (e)=>{
     e.preventDefault();
-    enviarDatos(urlImagenProducto, categoriaProducto, nombreProducto, precioProducto, descripcionProducto)
-    //acá tengo que validar los datos
-    // if(todo ok){
-
-    // } else {
-    //     la pifiaste man
-    // }
-
-    clienteService.modificarProducto(nombreProducto, urlImagenProducto, precioProducto, categoriaProducto, descripcionProducto, idProducto).then(results => {
-        console.log(results);
-        alert("Producto modificado con éxito");
-    })
+    console.log(valores)
+    clienteService.modificarProducto(valores.nombre, valores.url, valores.precio, valores.categoria, valores.descripcion, idProducto)
 })

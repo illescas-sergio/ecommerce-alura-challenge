@@ -27,4 +27,6 @@ function validarFormulario(e) {
       return;
     }
     //this.submit();
-  }
+  };
+
+  

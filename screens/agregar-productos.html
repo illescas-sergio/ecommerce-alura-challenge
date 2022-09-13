@@ -57,29 +57,28 @@
     
     <main class="agregar-productos">
         <div class="agregar-productos__div container">
-            <form class="agregar-productos__form" name="form">
-                <h4 class="agregar-productos__title">Agregar nuevo producto</h4>
-                <!-- <input class="login__input--email" type="email" name="email" placeholder="Escriba su correo electrónico">
-                <input class="login__input--password" type="password" name="contraseña" placeholder="Ingrese su contraseña"> -->
+            <form class="agregar-productos__form" name="form" data-formCrear>
+                <h4 class="agregar-productos__title">Modificar Producto</h4>
+
                 <div class="agregar-productos__input--div">
                     <span class="agregar-productos__input--placeholder">Url de imagen</span>
-                    <input class="agregar-productos__input" type="text" name="nombre">
+                    <input class="agregar-productos__input" type="text" name="url" data-url>
                 </div>
                 <div class="agregar-productos__input--div">
                     <span class="agregar-productos__input--placeholder">Categoría</span>
-                    <input class="agregar-productos__input" type="text" name="nombre">
+                    <input class="agregar-productos__input" type="text" name="categoria" data-sectionId>
                 </div>
                 <div class="agregar-productos__input--div">
                     <span class="agregar-productos__input--placeholder">Nombre del producto</span>
-                    <input class="agregar-productos__input" type="text" name="nombre">
+                    <input class="agregar-productos__input" type="text" name="nombre" data-name>
                 </div>
                 <div class="agregar-productos__input--div">
                     <span class="agregar-productos__input--placeholder">Precio del producto</span>
-                    <input class="agregar-productos__input" type="text" name="nombre">
+                    <input class="agregar-productos__input" type="text" name="precio" data-price>
                 </div>
-                <textarea class="agregar-productos__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Descripción del producto"></textarea>
-                <button type="submit" class="agregar-productos__button">Agregar producto</button>
-            </form>   
+                <textarea class="agregar-productos__textarea" rows="5" cols="40" id="mensagem" name="descripcion" placeholder="Descripción del producto" data-description></textarea>
+                <button type="submit" class="agregar-productos__button" data-enviarEdicion>Aceptar</button>
+            </form> 
         </div>    
     </main>
 

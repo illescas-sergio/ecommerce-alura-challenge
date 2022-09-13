@@ -19,16 +19,28 @@ const agregarProducto = (name, imageUrl, price, id = uuid.v4(), sectionId, descr
 const modificarProducto = (name, imageUrl, price, sectionId, description, id) => {
     return fetch(`http://localhost:3000/producto?id=${id}`, {
         method: "PUT",
-        headers: {"content-type": "aplication/json"},
-        body: JSON.stringify({name, imageUrl, price, id, sectionId, description})
-    });
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({name, imageUrl, price, sectionId, description, id})
+    })
+    .then(respuesta => console.log(respuesta))
+    .catch(error => console.log(error));
 };
+
+const actualizarCliente = (nombre, email, id) => {
+    return fetch(`http://localhost:3000/perfil/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ nombre, email }),
+    })
+      .then((respuesta) => respuesta)
+      .catch((err) => console.log(err));
+  };
 
 const eliminarProducto = (id) => {
     return fetch(`http://localhost:3000/producto?id=${id}`, {
-        method: "DELETE",
-        headers: {"content-type": "aplication/json"},
-        body: JSON.stringify({name, imageUrl, price, id: uuid.v4(), sectionId, description})
+        method: "DELETE"
     });
 };
 
