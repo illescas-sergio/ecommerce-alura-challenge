@@ -8,11 +8,11 @@ const detalleProducto = (id) => {
     return fetch(`http://localhost:3000/producto/?id=${id}`);
 };
 
-const agregarProducto = (name, imageUrl, price, id = uuid.v4(), sectionId, description) => {
+const agregarProducto = (name, imageUrl, price, sectionId, description) => {
     return fetch("http://localhost:3000/producto", {
         method: "POST",
-        headers: {"content-type": "aplication/json"},
-        body: JSON.stringify({name, imageUrl, price, id, sectionId, description})
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({name, imageUrl, price, id: uuid.v4(), sectionId, description})
     });
 };
 
