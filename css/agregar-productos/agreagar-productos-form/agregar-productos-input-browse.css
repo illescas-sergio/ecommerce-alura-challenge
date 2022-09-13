@@ -1,0 +1,5 @@
+#browse::-webkit-file-upload-button{
+    background-color: var(--color-botones);
+    border-style: none;
+    color: var(--color-fondo-blanco);
+}
