@@ -113,12 +113,12 @@
       "description": "Praesent consequat dolor non diam viverra porta. Maecenas id rhoncus mauris. Sed placerat et dui in dictum. Morbi ornare molestie congue. Duis sed lectus eget eros posuere volutpat eget sed lectus. In placerat iaculis mattis. Nullam at tortor lorem. Curabitur quis urna in ligula porttitor pellentesque et ut risus. Nam id mattis sapien, venenatis auctor tortor. Etiam ligula diam, lacinia quis consectetur sit amet, sodales tincidunt metus. Praesent eget sodales tellus. Nullam efficitur, quam eu aliquet ultricies, odio tortor tincidunt dolor, ut consectetur nibh ligula vel arcu. Maecenas egestas risus tempor mi interdum, semper mattis enim pellentesque. Phasellus elit augue, posuere quis facilisis et, ullamcorper in enim. Nam vitae neque maximus, auctor urna vitae, tempus ligula. Donec eleifend justo magna, sit amet venenatis sapien venenatis molestie."
     },
     {
-      "name": "Control y Consola XYZ",
+      "name": "Control y consola XYZ",
       "imageUrl": "/assets/products/unsplash_sYVY_ZKwaxU.png",
       "price": "$60,00",
-      "id": 15,
       "sectionId": "diversos",
-      "description": "Praesent consequat dolor non diam viverra porta. Maecenas id rhoncus mauris. Sed placerat et dui in dictum. Morbi ornare molestie congue. Duis sed lectus eget eros posuere volutpat eget sed lectus. In placerat iaculis mattis. Nullam at tortor lorem. Curabitur quis urna in ligula porttitor pellentesque et ut risus. Nam id mattis sapien, venenatis auctor tortor. Etiam ligula diam, lacinia quis consectetur sit amet, sodales tincidunt metus. Praesent eget sodales tellus. Nullam efficitur, quam eu aliquet ultricies, odio tortor tincidunt dolor, ut consectetur nibh ligula vel arcu. Maecenas egestas risus tempor mi interdum, semper mattis enim pellentesque. Phasellus elit augue, posuere quis facilisis et, ullamcorper in enim. Nam vitae neque maximus, auctor urna vitae, tempus ligula. Donec eleifend justo magna, sit amet venenatis sapien venenatis molestie."
+      "description": "Praesent consequat dolor non diam viverra porta. Maecenas id rhoncus mauris. Sed placerat et dui in dictum. Morbi ornare molestie congue. Duis sed lectus eget eros posuere volutpat eget sed lectus. In placerat iaculis mattis. Nullam at tortor lorem. Curabitur quis urna in ligula porttitor pellentesque et ut risus. Nam id mattis sapien, venenatis auctor tortor. Etiam ligula diam, lacinia quis consectetur sit amet, sodales tincidunt metus. Praesent eget sodales tellus. Nullam efficitur, quam eu aliquet ultricies, odio tortor tincidunt dolor, ut consectetur nibh ligula vel arcu. Maecenas egestas risus tempor mi interdum, semper mattis enim pellentesque. Phasellus elit augue, posuere quis facilisis et, ullamcorper in enim. Nam vitae neque maximus, auctor urna vitae, tempus ligula. Donec eleifend justo magna, sit amet venenatis sapien venenatis molestie.",
+      "id": 15
     },
     {
       "name": "Control y Consola XYZ",

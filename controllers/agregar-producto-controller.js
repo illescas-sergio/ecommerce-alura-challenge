@@ -30,7 +30,6 @@ inputs.forEach(input => {
 
 descripcionProducto.addEventListener('change', () => {
     const texto = descripcionProducto.value;
-    console.log(texto)
     valores.descripcion = texto;
 });
 
@@ -46,14 +45,15 @@ const valores = {
 
 crearProducto.addEventListener('click', (e)=>{
    e.preventDefault();
-   const name = valores.nombre;
-   const imageUrl = valores.url;
-   const price = valores.precio;
-   const sectionId = valores.categoria;
-   const description = valores.descripcion;
+   const {nombre, url, precio, categoria, descripcion} = valores;
+//    const name = nombre;
+//    const imageUrl = url;
+//    const price = precio;
+//    const sectionId = categoria;
+//    const description = descripcion;
    console.log("voy a enviar esto");
    console.log(valores);
-   clienteService.agregarProducto(name, imageUrl, price, sectionId, description)
+   clienteService.agregarProducto(nombre, url, precio, categoria, descripcion)
    .then(resp => console.log(resp));
    window.location.href = "../index.html";
 });
