@@ -3,7 +3,7 @@ import { clienteService } from "../service/client-service.js";
 const urlSearch = new URLSearchParams(window.location.search);
 const idProducto = urlSearch.get("id");
 
-const formularioEditar = document.querySelector("[data-formEditar]");
+// const formularioEditar = document.querySelector("[data-formEditar]");
 
 const urlImagenProducto = document.querySelector("[data-url]");
 const categoriaProducto = document.querySelector("[data-sectionId]");
@@ -12,6 +12,7 @@ const precioProducto = document.querySelector("[data-price]");
 const descripcionProducto = document.querySelector("[data-description]");
 
 const enviarEdicionProducto = document.querySelector("[data-enviarEdicion]");
+
 
 const inputs = document.querySelectorAll('input');
 
@@ -30,10 +31,12 @@ const valores = {
     id: idProducto
 };
 
+console.log(valores);
+
 function guardarInput(e){
     valores[e.target.name] = e.target.value;
+    console.log(valores);
 }
-
 
 function obtenerDataProducto(idProducto){
     clienteService.detalleProducto(idProducto).then((resp) => resp.json())
@@ -41,7 +44,16 @@ function obtenerDataProducto(idProducto){
         console.log(data);
         data.forEach(item => {
 
-        urlImagenProducto.value = item.imageUrl;
+        //los guardo en el objeto que voy a pasar a la funcion PUT
+        //para que lo que no se edita se conserve.
+        valores.url = item.imageUrl;
+        valores.nombre = item.name;
+        valores.categoria = item.sectionId;
+        valores.precio = item.price;
+        valores.descripcion = item.description;
+        
+        //muestro los valores que vienen de la db en el form
+        // urlImagenProducto.value = item.imageUrl; //al input file no se le puede asignar el value
         categoriaProducto.value = item.sectionId;
         nombreProducto.value = item.name;
         precioProducto.value = item.price;
@@ -53,8 +65,10 @@ function obtenerDataProducto(idProducto){
 
 obtenerDataProducto(idProducto)
 
-formularioEditar.addEventListener("submit", (e)=>{
+enviarEdicionProducto.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log(valores)
-    clienteService.modificarProducto(valores.nombre, valores.url, valores.precio, valores.categoria, valores.descripcion, idProducto)
+    const {nombre, url, precio, categoria, descripcion, id} = valores;
+    clienteService.modificarProducto(nombre, url, precio, categoria, descripcion, id)
+    .then(resp => console.log(resp));
+    window.location.href = "../index.html";
 })

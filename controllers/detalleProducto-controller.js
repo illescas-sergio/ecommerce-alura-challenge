@@ -11,6 +11,7 @@ const detalle = (imageUrl, name, price, id, sectionId, description) => {
     const divDetalle = document.createElement('div');
     divDetalle.classList.add("detalle__producto__principal--div");
 
+  
     const plantillaDetalle = `
 
         <div class="detalle__producto__principal--img">
@@ -27,7 +28,18 @@ const detalle = (imageUrl, name, price, id, sectionId, description) => {
         </div>
     
     `
+
     divDetalle.innerHTML = plantillaDetalle;
+
+    const botonDelete = divDetalle.querySelector(".boton-eliminar");
+    botonDelete.addEventListener('click', () => {
+
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const id = urlSearchParams.get("id");
+       
+        clienteService.eliminarProducto(id).then(resp => console.log(resp));
+        window.location.href = "../index.html";
+    })
 
     return divDetalle
 }

@@ -1,11 +1,11 @@
 import { clienteService } from "../service/client-service.js";
 
-const formularioEditar = document.querySelector("[data-formAgregar]");
+// const formularioEditar = document.querySelector("[data-formAgregar]");
 
-const dataUrl = document.querySelector("[data-url]");
-const categoriaProducto = document.querySelector("[data-categoria]");
-const nombreProducto = document.querySelector("[data-nombre]");
-const precioProducto = document.querySelector("[data-precio]");
+// const dataUrl = document.querySelector("[data-url]");
+// const categoriaProducto = document.querySelector("[data-categoria]");
+// const nombreProducto = document.querySelector("[data-nombre]");
+// const precioProducto = document.querySelector("[data-precio]");
 const descripcionProducto = document.querySelector("[data-descripcion]");
 
 const crearProducto = document.querySelector("[data-botonAgregar]");

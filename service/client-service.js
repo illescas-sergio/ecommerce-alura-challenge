@@ -17,29 +17,17 @@ const agregarProducto = (name, imageUrl, price, sectionId, description) => {
 };
 
 const modificarProducto = (name, imageUrl, price, sectionId, description, id) => {
-    return fetch(`http://localhost:3000/producto?id=${id}`, {
+    return fetch(`http://localhost:3000/producto/${id}`, {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({name, imageUrl, price, sectionId, description, id})
+        body: JSON.stringify({name, imageUrl, price, sectionId, description})
     })
     .then(respuesta => console.log(respuesta))
     .catch(error => console.log(error));
 };
 
-const actualizarCliente = (nombre, email, id) => {
-    return fetch(`http://localhost:3000/perfil/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ nombre, email }),
-    })
-      .then((respuesta) => respuesta)
-      .catch((err) => console.log(err));
-  };
-
 const eliminarProducto = (id) => {
-    return fetch(`http://localhost:3000/producto?id=${id}`, {
+    return fetch(`http://localhost:3000/producto/${id}`, {
         method: "DELETE"
     });
 };
@@ -51,40 +39,5 @@ export const clienteService = {
     agregarProducto,
     eliminarProducto
 };
-
-//saco los return porque en las funciones flecha el return está implicito:
-    //y queda todo en una linea
-
-
-
     
-    // const eliminarCliente = (id) => {
-        
-    //         return fetch(`http://localhost:3000/perfil/${id}`, {
-    //             method: "DELETE",
-    //         });
-    // }
-    
-    // const actualizarCliente = (nombre, email, id) => {
-    
-    //         return fetch(`http://localhost:3000/perfil/${id}`, {
-    //             method: "PUT",
-    //             headers: {
-    //                 "content-type": "application/json"
-    //             },
-    //             body: JSON.stringify({nombre, email})
-    //         })
-    //         .then(respuesta => respuesta)
-    //         .catch(err => console.log(err));
-    // }
-    
-    
-    
-    // export const clientServices = {
-    //     listaClientes,
-    //     crearCliente,
-    //     eliminarCliente,
-    //     detalleCliente,
-    //     actualizarCliente
-    // };
     
