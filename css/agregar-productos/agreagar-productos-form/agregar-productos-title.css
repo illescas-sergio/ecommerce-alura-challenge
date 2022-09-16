@@ -4,3 +4,18 @@
     line-height: 38px;
 }
 
+
+/*tablet*/
+@media (max-width: 768px) {
+    .agregar-productos__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+    }
+    
+}
+    
+/*mobile*/
+@media only screen and (max-width: 480px) {
+    
+}
