@@ -55,11 +55,11 @@
     
     <main class="login">
         <div class="login__div">
-            <form class="login__form" name="form">
+            <form class="login__form" name="form" data-formLogin>
                 <h4 class="login__title">Iniciar Sesión</h4>
-                <input class="login__input--email" type="email" name="email" placeholder="Escriba su correo electrónico">
-                <input class="login__input--password" type="password" name="contraseña" placeholder="Ingrese su contraseña">
-                <button type="submit" class="login__button--login">Entrar</button>
+                <input class="login__input--email" type="email" name="email" placeholder="Escriba su correo electrónico" data-mailUsuario required>
+                <input class="login__input--password" type="password" name="contraseña" placeholder="Ingrese su contraseña" data-pass required pattern="">
+                <button type="submit" class="login__button--login" data-login>Entrar</button>
             </form>   
         </div>    
     </main>
