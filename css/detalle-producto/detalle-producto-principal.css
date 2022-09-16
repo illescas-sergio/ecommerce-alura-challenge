@@ -15,5 +15,8 @@
   
 /*mobile*/
 @media (max-width: 480px) {
+    .detalle__producto__principal--div {
+        display: block;
+    }
     
 }

@@ -9,7 +9,7 @@
 .detalle__producto__principal--img img {
     object-fit: cover;
     height: 100%;
-    
+    margin: auto;
 }
 
 
