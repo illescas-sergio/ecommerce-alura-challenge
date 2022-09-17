@@ -1,24 +1,54 @@
 const formLogin = document.querySelector("[data-formLogin]");
-const correo = document.querySelector("data-mailUsuario");
-const clave = document.querySelector("data-pass");
+const correo = document.querySelector("[data-mailUsuario]");
+const clave = document.querySelector("[data-pass]");
 const botonLogin = document.querySelector("[data-login]");
 
-//validar contraseña
-// al menos una mayuscula
-// al menos una minuscula
-// al menos un numero
-// al menos 8 caracteres
-// sin espacios
+const mensajesCustom = {
+    email: {valueMissing: "Debe ingresar su correo electrónico",
+    patternMismatch: "El correo debe tener un formato valido"},
+    password: {
+        patternMismatch: "La contraseña debe contener al menos una mayuscula, al menos una minuscula, al menos un nuúmero, al menos 8 caracteres; sin espacios",
+        valueMissing: "Debe ingresar su contraseña"}
+};
 
-// puedes usar la expresión regular:
+correo.addEventListener('change', () => {
+   
+   if(correo.validity.patternMismatch){
+    correo.setCustomValidity(mensajesCustom.email.patternMismatch);
+   }
+   if(correo.validity.valueMissing){
+    correo.setCustomValidity(mensajesCustom.email.valueMissing); 
+   }
+   correo.reportValidity();
+});
 
-// var regex =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
-// la cual valida contraseñas de al menos una letra, al menos un numero, al menos una letra mayúscula, al menos 8 caracteres, no permite espacios.
+clave.addEventListener('change', () => {
+   
+    if(clave.validity.patternMismatch){
+        clave.setCustomValidity(mensajesCustom.email.patternMismatch);
+    }
+    if(clave.validity.valueMissing){
+        clave.setCustomValidity(mensajesCustom.email.valueMissing); 
+    }
+    clave.reportValidity();
+ });
 
-// Este es un ejemplo usando la Regexp y validando campos para confirmar el valor de la contraseña:
+botonLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    correo.checkValidity();
+    clave.checkValidity();
+    if(!correo.checkValidity() || !clave.checkValidity()){
+        console.log("no se puede enviar");
+    }else {
+        console.log("Ahora si se puede enviar");
+    }
+    
+})
+
 
 // function checkPassword(valor){
-//     var myregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/; 
+//     const myregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/; 
+
 //    if(myregex.test(valor)){
 //        alert(valor+" es valido :-) !");
 //        return true;        
@@ -27,6 +57,9 @@ const botonLogin = document.querySelector("[data-login]");
 //        return false;        
 //    }   
 //  }
+
+
+
 
 // La expresión regular final para validar el email con JavaScript sería:
 
@@ -64,3 +97,7 @@ const botonLogin = document.querySelector("[data-login]");
 //         return false;
 //     }
 // }
+
+
+
+// TRAIDO DE INDEX FORM

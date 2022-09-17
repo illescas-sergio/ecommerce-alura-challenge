@@ -57,8 +57,8 @@
         <div class="login__div">
             <form class="login__form" name="form" data-formLogin>
                 <h4 class="login__title">Iniciar Sesión</h4>
-                <input class="login__input--email" type="email" name="email" placeholder="Escriba su correo electrónico" data-mailUsuario required>
-                <input class="login__input--password" type="password" name="contraseña" placeholder="Ingrese su contraseña" data-pass required pattern="">
+                <input class="login__input--email" type="email" name="email" placeholder="Escriba su correo electrónico" data-mailUsuario required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$">
+                <input class="login__input--password" type="password" name="contraseña" placeholder="Ingrese su contraseña" data-pass required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$">
                 <button type="submit" class="login__button--login" data-login>Entrar</button>
             </form>   
         </div>    
@@ -79,14 +79,14 @@
                     <a class="footer__links--item" href="">Anuncie aquí</a>
                 </div>
                 <div class="footer__contact">
-                    <form class="footer__form" name="form">
+                    <form class="footer__form" name="form" data-form="form">
                         <h4 class="form__title">Hable con nosotros</h4>
                         <div class="form__input--div">
                             <span class="form__input--placeholder">Nombre</span>
-                            <input class="form__input" type="text" name="nombre">
+                            <input class="form__input" type="text" name="nombre" data-form="form-nombre" max="40" min="3" required>
                         </div>
-                        <textarea class="form__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
-                        <button type="submit" class="form__button">Enviar mensaje</button>
+                        <textarea class="form__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje" data-form="form-mensaje" required minlength="3" maxlength="120"></textarea>
+                        <button type="submit" class="form__button" data-form="enviar">Enviar mensaje</button>
                     </form>   
                 </div>
             </div>
@@ -97,7 +97,13 @@
                 <p>2022</p>
             </div>
         </section>
-    </footer>    
+    </footer> 
+    
+    <script type="module" src="../controllers/search-controller.js"></script>
+    <script type="module" src="/validators/form-index-validator.js"></script>
+    <script type="module" src="../service/client-service.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script type="module" src="/validators/login-validator.js"></script>
     
 </body>
 </html>
