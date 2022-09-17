@@ -11,39 +11,42 @@ const mensajesCustom = {
         valueMissing: "Debe ingresar su contraseña"}
 };
 
-correo.addEventListener('change', () => {
-   
-   if(correo.validity.patternMismatch){
-    correo.setCustomValidity(mensajesCustom.email.patternMismatch);
-   }
-   if(correo.validity.valueMissing){
-    correo.setCustomValidity(mensajesCustom.email.valueMissing); 
-   }
-   correo.reportValidity();
-});
 
-clave.addEventListener('change', () => {
-   
-    if(clave.validity.patternMismatch){
-        clave.setCustomValidity(mensajesCustom.email.patternMismatch);
-    }
-    if(clave.validity.valueMissing){
-        clave.setCustomValidity(mensajesCustom.email.valueMissing); 
-    }
-    clave.reportValidity();
- });
+ 
 
 botonLogin.addEventListener("click", (e) => {
     e.preventDefault();
-    correo.checkValidity();
-    clave.checkValidity();
+
+    correo.addEventListener('change', () => {
+   
+        if(correo.validity.patternMismatch){
+         correo.setCustomValidity(mensajesCustom.email.patternMismatch);
+        }
+        if(correo.validity.valueMissing){
+         correo.setCustomValidity(mensajesCustom.email.valueMissing); 
+        }
+        correo.reportValidity();
+     });
+     
+     clave.addEventListener('change', () => {
+        
+         if(clave.validity.patternMismatch){
+             clave.setCustomValidity(mensajesCustom.password.patternMismatch);
+         }
+         if(clave.validity.valueMissing){
+             clave.setCustomValidity(mensajesCustom.password.valueMissing); 
+         }
+         clave.reportValidity();
+      });
+   
     if(!correo.checkValidity() || !clave.checkValidity()){
-        console.log("no se puede enviar");
+        return
     }else {
-        console.log("Ahora si se puede enviar");
+        formLogin.submit()
+        window.location.href = "index.html";
     }
-    
-})
+});
+
 
 
 // function checkPassword(valor){
