@@ -5,45 +5,45 @@ const botonLogin = document.querySelector("[data-login]");
 
 const mensajesCustom = {
     email: {valueMissing: "Debe ingresar su correo electrónico",
-    patternMismatch: "El correo debe tener un formato valido"},
+        patternMismatch: "El correo debe tener un formato valido"},
     password: {
         patternMismatch: "La contraseña debe contener al menos una mayuscula, al menos una minuscula, al menos un nuúmero, al menos 8 caracteres; sin espacios",
         valueMissing: "Debe ingresar su contraseña"}
 };
 
+clave.addEventListener('blur', () => {
+    console.log(clave.value)   
+    if(clave.validity.patternMismatch){
+        clave.setCustomValidity(mensajesCustom.password.patternMismatch);
+    }
+    if(clave.validity.valueMissing){
+        clave.setCustomValidity(mensajesCustom.password.valueMissing); 
+    }
+    clave.reportValidity();
+ });
 
- 
+ correo.addEventListener('blur', () => {
+    console.log(correo.value)
+    if(correo.validity.patternMismatch){
+     correo.setCustomValidity(mensajesCustom.email.patternMismatch);
+    }
+    if(correo.validity.valueMissing){
+     correo.setCustomValidity(mensajesCustom.email.valueMissing); 
+    }
+    correo.reportValidity();
+ });
 
 botonLogin.addEventListener("click", (e) => {
     e.preventDefault();
 
-    correo.addEventListener('change', () => {
-   
-        if(correo.validity.patternMismatch){
-         correo.setCustomValidity(mensajesCustom.email.patternMismatch);
-        }
-        if(correo.validity.valueMissing){
-         correo.setCustomValidity(mensajesCustom.email.valueMissing); 
-        }
-        correo.reportValidity();
-     });
-     
-     clave.addEventListener('change', () => {
-        
-         if(clave.validity.patternMismatch){
-             clave.setCustomValidity(mensajesCustom.password.patternMismatch);
-         }
-         if(clave.validity.valueMissing){
-             clave.setCustomValidity(mensajesCustom.password.valueMissing); 
-         }
-         clave.reportValidity();
-      });
+    correo.reportValidity();
+    clave.reportValidity();
    
     if(!correo.checkValidity() || !clave.checkValidity()){
-        return
+        alert("Revise los datos ingresados")
     }else {
-        formLogin.submit()
-        window.location.href = "index.html";
+        alert("Bienvenido")
+        window.location.href = "/screens/productos.html";
     }
 });
 
