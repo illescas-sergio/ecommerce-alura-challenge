@@ -59,8 +59,8 @@
         <div class="login__div">
             <form class="login__form" name="form" data-formLogin>
                 <h4 class="login__title">Iniciar Sesión</h4>
-                <input class="login__input--email" type="email" name="email" placeholder="Escriba su correo electrónico" data-mailUsuario required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$">
-                <input class="login__input--password" type="password" name="contraseña" placeholder="Ingrese su contraseña" data-pass required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$">
+                <input class="login__input--email" type="email" name="email" placeholder="Escriba su correo electrónico" data-mailUsuario required autocomplete="off" pattern="^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$">
+                <input class="login__input--password" type="password" name="contraseña" placeholder="Ingrese su contraseña" data-pass required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$" autocomplete="off">
                 <button type="submit" class="login__button--login" data-login>Entrar</button>
             </form>   
         </div>    

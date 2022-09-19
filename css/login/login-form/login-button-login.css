@@ -9,6 +9,11 @@
 
 }
 
+.login__button--login:disabled {
+    background-color: gray;
+}
+
+
 /*tablet*/
 @media (max-width: 768px) {
     .login__button--login {

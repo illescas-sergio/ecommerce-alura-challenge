@@ -18,7 +18,7 @@ const textoBanner = () => {
     const templateTextoBanner = `
         <h1 class="banner__title">${titular}</h1>
         <p class="banner__subtitle">${subtitulo}</p>
-        <a href="/screens/promocionados.html?sectionId=${productosEnPromocion.toLowerCase()}"><button class="banner__boton--ver">Ver ${productosEnPromocion}</button></a>`
+        <a href="/screens/secciones.html?sectionId=${productosEnPromocion.toLowerCase()}"><button class="banner__boton--ver">Ver ${productosEnPromocion}</button></a>`
     divBanner.innerHTML = templateTextoBanner;
     return divBanner
 }

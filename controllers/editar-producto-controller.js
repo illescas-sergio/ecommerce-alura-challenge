@@ -70,5 +70,5 @@ enviarEdicionProducto.addEventListener('click', (e) => {
     const {nombre, url, precio, categoria, descripcion, id} = valores;
     clienteService.modificarProducto(nombre, url, precio, categoria, descripcion, id)
     .then(resp => console.log(resp));
-    window.location.href = "../index.html";
+    window.location.href = "/screens/productos.html";
 })

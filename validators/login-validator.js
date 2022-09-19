@@ -5,102 +5,66 @@ const botonLogin = document.querySelector("[data-login]");
 
 const mensajesCustom = {
     email: {valueMissing: "Debe ingresar su correo electrónico",
-        patternMismatch: "El correo debe tener un formato valido"},
+        patternMismatch: "El correo debe tener un formato válido",
+        typeMismatch: "Debe ser un email válido"},
     password: {
-        patternMismatch: "La contraseña debe contener al menos una mayuscula, al menos una minuscula, al menos un nuúmero, al menos 8 caracteres; sin espacios",
-        valueMissing: "Debe ingresar su contraseña"}
+        patternMismatch: "La contraseña debe contener al menos una mayúscula, al menos una minúscula, al menos un número, al menos 8 caracteres; sin espacios",
+        valueMissing: "Debe ingresar su contraseña",
+        typeMismatch: "Debe coincidir con el formato esperado"}
 };
 
-clave.addEventListener('blur', () => {
-    console.log(clave.value)   
-    if(clave.validity.patternMismatch){
-        clave.setCustomValidity(mensajesCustom.password.patternMismatch);
-    }
-    if(clave.validity.valueMissing){
-        clave.setCustomValidity(mensajesCustom.password.valueMissing); 
-    }
-    clave.reportValidity();
- });
 
- correo.addEventListener('blur', () => {
-    console.log(correo.value)
+correo.addEventListener('input', () => {
+    
     if(correo.validity.patternMismatch){
-     correo.setCustomValidity(mensajesCustom.email.patternMismatch);
-    }
-    if(correo.validity.valueMissing){
-     correo.setCustomValidity(mensajesCustom.email.valueMissing); 
+        correo.setCustomValidity(mensajesCustom.email.patternMismatch);
+    } else if(correo.validity.typeMismatch){
+        correo.setCustomValidity(mensajesCustom.password.typeMismatch); 
+    } else if(correo.validity.valueMissing){
+        correo.setCustomValidity(mensajesCustom.email.valueMissing); 
+    } else {
+        console.log("soy el else")
+        correo.setCustomValidity("");    
     }
     correo.reportValidity();
+    console.log(correo.validity)
+ });
+
+ clave.addEventListener('input', () => {
+    
+    if(clave.validity.patternMismatch){
+        console.log("soy pattern misMatch")
+        clave.setCustomValidity(mensajesCustom.password.patternMismatch);
+    } else if(clave.validity.typeMismatch){
+        console.log("soy type misMatch")
+        clave.setCustomValidity(mensajesCustom.password.typeMismatch); 
+    } else if(clave.validity.valueMissing){
+        console.log("soy value missing")
+        clave.setCustomValidity(mensajesCustom.password.valueMissing); 
+    } else {
+        console.log("soy el else")
+        clave.setCustomValidity("");    
+    }
+    clave.reportValidity();
+    console.log(clave.validity)
  });
 
 botonLogin.addEventListener("click", (e) => {
+    
+    console.log("submiteando")
     e.preventDefault();
 
-    correo.reportValidity();
-    clave.reportValidity();
-   
-    if(!correo.checkValidity() || !clave.checkValidity()){
-        alert("Revise los datos ingresados")
-    }else {
-        alert("Bienvenido")
+    correo.checkValidity();
+    clave.checkValidity();
+
+    if(correo.checkValidity() && clave.checkValidity()){
+        correo.setCustomValidity("");
+        clave.setCustomValidity(""); 
+        formLogin.submit()
         window.location.href = "/screens/productos.html";
+    } else {
+        correo.checkValidity();
+        clave.checkValidity();
+        alert("Ingrese los datos requeridos")
     }
 });
-
-
-
-// function checkPassword(valor){
-//     const myregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/; 
-
-//    if(myregex.test(valor)){
-//        alert(valor+" es valido :-) !");
-//        return true;        
-//    }else{
-//       alert(valor+" NO es valido!");
-//        return false;        
-//    }   
-//  }
-
-
-
-
-// La expresión regular final para validar el email con JavaScript sería:
-
-// /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/
-// Para la implementación de validar el email con JavaScript vamos a crear un formulario, el cual llamará a la función validarEmail. Esta función será la que ejecute la expresión regular.
-
-// function validarEmail(email){...}
-// La expresión regular la ejecutaremos mediante el método test del objeto RegExp. El objeto RegExp, como su nombre bien indica, representa las expresiones regulares.
-
-// function validarEmail(valor) {
-//   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
-//    alert("La dirección de email " + valor + " es correcta.");
-//   } else {
-//    alert("La dirección de email es incorrecta.");
-//   }
-// }
-
-
-//validar email
-
-// function validateEmail(){
-                
-//     // Get our input reference.
-//     var emailField = document.getElementById('user-email');
-    
-//     // Define our regular expression.
-//     var validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-
-//     // Using test we can check if the text match the pattern
-//     if( validEmail.test(emailField.value) ){
-//         alert('Email is valid, continue with form submission');
-//         return true;
-//     }else{
-//         alert('Email is invalid, skip form submission');
-//         return false;
-//     }
-// }
-
-
-
-// TRAIDO DE INDEX FORM

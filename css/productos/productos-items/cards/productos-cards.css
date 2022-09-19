@@ -6,6 +6,24 @@
 .productos__card__img {
     height: 174px;
     width: 100%;
+    position: relative;
+    
+}
+
+.iconos__menu {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+}
+
+.iconos__menu i {
+    color: var(--color-fondo-blanco);
+}
+
+.iconos__menu button{
+    background-color: transparent;
+    border: none;
 }
 
 .productos__card__img img{

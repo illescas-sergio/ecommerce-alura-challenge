@@ -42,8 +42,6 @@
     <link rel="stylesheet" href="../css/footer/footer-flex/footer-contact/footer-contact.css">
     <link rel="stylesheet" href="../css/footer/footer-flex/footer-contact/footer-form.css">
 
-    <script src="https://kit.fontawesome.com/4018f21b4f.js" crossorigin="anonymous"></script>
-
     <title>Detalles - Alura Geek</title>
 
 
@@ -146,15 +144,15 @@
                     <a class="footer__links--item" href="">Anuncie aquí</a>
                 </div>
                 <div class="footer__contact">
-                    <form class="footer__form" name="form">
+                    <form class="footer__form" name="form" data-form="form">
                         <h4 class="form__title">Hable con nosotros</h4>
                         <div class="form__input--div">
                             <span class="form__input--placeholder">Nombre</span>
-                            <input class="form__input" type="text" name="nombre">
+                            <input class="form__input" type="text" name="nombre" data-form="form-nombre" max="40" min="3" required>
                         </div>
-                        <textarea class="form__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
-                        <button type="submit" class="form__button">Enviar mensaje</button>
-                    </form>
+                        <textarea class="form__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje" data-form="form-mensaje" required minlength="3" maxlength="120"></textarea>
+                        <button type="submit" class="form__button" data-form="enviar">Enviar mensaje</button>
+                    </form>  
                 </div>
             </div>
         </section>
@@ -169,6 +167,7 @@
     <script type="module" src="../controllers/search-controller.js"></script>
     <script type="module" src="../controllers/detalleProducto-controller.js"></script>
     <script type="module" src="../service/client-service.js"></script>
+    <script type="module" src="/validators/form-index-validator.js"></script>
 
 </body>
 </html>
