@@ -46,18 +46,36 @@ const categoriasCard = (imageUrl, name, price, id, sectionId) => {
     return divCard
 }
 
+let ordenElemento = 0;
+let section = ""
 
 clienteService.todosLosProductos().then(resp => {
     return resp.json();
 })
 .then(data => {
 
+
     return data.forEach((el) => {
 
         const productos = categoriasCard(el.imageUrl, el.name, el.price, el.id, el.sectionId);
+        
+        ordenElemento +=1;
 
+        //contador y indicador de seccion para poder agregar la clase css "erase"
+        if(ordenElemento === 1){
+            section = el.sectionId;
+        } else if(el.sectionId !== section){
+            section = el.sectionId;
+            ordenElemento = 1;
+        }
+
+        if(ordenElemento > 4){
+            productos.classList.add("erase");
+        } 
+        
+        // asignando elemento a cada div
         if(el.sectionId === "star-wars"){
-            starWars.appendChild(productos);
+            starWars.appendChild(productos);  
         };
         if(el.sectionId === "consolas"){
             consolas.appendChild(productos);
@@ -65,7 +83,6 @@ clienteService.todosLosProductos().then(resp => {
         if(el.sectionId === "diversos"){
             diversos.appendChild(productos);
         }
-        
     });
 })
 
