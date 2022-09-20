@@ -1,7 +1,7 @@
 
 
 const todosLosProductos = () => {
-    return fetch('http://localhost:3000/producto');
+    return fetch('https://ecommerce-fakeapi-alura.herokuapp.com/producto');
 };
 
 const detalleProducto = (id) => {
