@@ -5,11 +5,11 @@ const todosLosProductos = () => {
 };
 
 const detalleProducto = (id) => {
-    return fetch(`http://localhost:3000/producto/?id=${id}`);
+    return fetch(`https://ecommerce-fakeapi-alura.herokuapp.com/producto/?id=${id}`);
 };
 
 const agregarProducto = (name, imageUrl, price, sectionId, description) => {
-    return fetch("http://localhost:3000/producto", {
+    return fetch("https://ecommerce-fakeapi-alura.herokuapp.com/producto", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({name, imageUrl, price, id: uuid.v4(), sectionId, description})
@@ -17,7 +17,7 @@ const agregarProducto = (name, imageUrl, price, sectionId, description) => {
 };
 
 const modificarProducto = (name, imageUrl, price, sectionId, description, id) => {
-    return fetch(`http://localhost:3000/producto/${id}`, {
+    return fetch(`https://ecommerce-fakeapi-alura.herokuapp.com/producto/${id}`, {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({name, imageUrl, price, sectionId, description})
@@ -27,7 +27,7 @@ const modificarProducto = (name, imageUrl, price, sectionId, description, id) =>
 };
 
 const eliminarProducto = (id) => {
-    return fetch(`http://localhost:3000/producto/${id}`, {
+    return fetch(`https://ecommerce-fakeapi-alura.herokuapp.com/producto/${id}`, {
         method: "DELETE"
     });
 };
