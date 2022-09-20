@@ -1,7 +1,7 @@
 
 
 const todosLosProductos = () => {
-    return fetch('http://localhost:3000/producto');
+    return fetch('https://63292516d2c97d8c5261c902.mockapi.io/api/producto');
 };
 
 const detalleProducto = (id) => {
